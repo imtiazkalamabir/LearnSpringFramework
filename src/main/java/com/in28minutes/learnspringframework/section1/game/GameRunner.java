@@ -1,4 +1,4 @@
-package com.in28minutes.learnspringframework.game;
+package com.in28minutes.learnspringframework.section1.game;
 
 public class GameRunner {
     private GamingConsole game;

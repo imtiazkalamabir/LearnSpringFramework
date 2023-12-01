@@ -1,9 +1,9 @@
-package com.in28minutes.learnspringframework;
+package com.in28minutes.learnspringframework.section1;
 
-import com.in28minutes.learnspringframework.game.GameRunner;
-import com.in28minutes.learnspringframework.game.PacmanGame;
+import com.in28minutes.learnspringframework.section2.game.GameRunner;
+import com.in28minutes.learnspringframework.section2.game.PacmanGame;
 
-public class AppGamingBasicJava {
+public class App01GamingBasicJava {
 
     public static void main(String [] args) {
         // var game = new MarioGame();

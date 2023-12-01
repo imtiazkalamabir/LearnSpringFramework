@@ -1,5 +1,6 @@
-package com.in28minutes.learnspringframework;
+package com.in28minutes.learnspringframework.helloworld;
 
+import org.springframework.beans.factory.annotation.Qualifier;
 import org.springframework.context.annotation.Bean;
 import org.springframework.context.annotation.Configuration;
 import org.springframework.context.annotation.Primary;
@@ -29,9 +30,15 @@ public class HelloWorldConfiguration {
     }
 
     @Bean
-    public Person person3Parameters(String name, int age, Address address2) {
+    public Person person3Parameters(String name, int age, @Qualifier("address3quanlifier") Address address2) {
         // name, age, address2
         return new Person(name, age, address2);
+    }
+
+    @Bean(name = "address3")
+    @Qualifier("address3quanlifier")
+    public Address address3() {
+        return new Address("House #32, Road #18, Block #C, Sector-2, Uttara", "Dhaka");
     }
 
     @Bean(name = "address2")
