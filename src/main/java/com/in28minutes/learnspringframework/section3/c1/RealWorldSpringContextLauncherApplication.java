@@ -1,4 +1,4 @@
-package com.in28minutes.learnspringframework.section4.a0;
+package com.in28minutes.learnspringframework.section3.c1;
 
 import org.springframework.context.annotation.AnnotationConfigApplicationContext;
 import org.springframework.context.annotation.ComponentScan;
@@ -8,7 +8,7 @@ import java.util.Arrays;
 
 @Configuration
 @ComponentScan //auto scan on current package
-public class SimpleSpringContextLauncherApplication {
+public class RealWorldSpringContextLauncherApplication {
 
     public static void main(String [] args) {
         /*// var game = new MarioGame();
@@ -17,10 +17,12 @@ public class SimpleSpringContextLauncherApplication {
         var gameRunner = new GameRunner(game);
         gameRunner.run();*/
 
-        try(var context = new AnnotationConfigApplicationContext(SimpleSpringContextLauncherApplication.class)) {
+        try(var context = new AnnotationConfigApplicationContext(RealWorldSpringContextLauncherApplication.class)) {
             // Print all Bean names
             Arrays.stream(context.getBeanDefinitionNames())
                     .forEach(System.out::println);
+
+            System.out.println(context.getBean(BusinessCalculationService.class).findMax());
 
         }
     }

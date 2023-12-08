@@ -1,8 +1,5 @@
-package com.in28minutes.learnspringframework.section4.a1;
+package com.in28minutes.learnspringframework.section3.a1;
 
-import com.in28minutes.learnspringframework.section3.game.GameRunner;
-import com.in28minutes.learnspringframework.section3.game.GamingConsole;
-import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.context.annotation.AnnotationConfigApplicationContext;
 import org.springframework.context.annotation.ComponentScan;
 import org.springframework.context.annotation.Configuration;
@@ -52,7 +49,7 @@ class Dependency2 {
 }
 
 @Configuration
-@ComponentScan //auto scan on current package
+@ComponentScan //auto scan will be performed on current package if no package name is specified
 public class DependencyInjectionLauncherApplication {
 
     public static void main(String [] args) {

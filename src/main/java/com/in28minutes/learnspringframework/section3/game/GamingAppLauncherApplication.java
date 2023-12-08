@@ -1,4 +1,4 @@
-package com.in28minutes.learnspringframework.section3;
+package com.in28minutes.learnspringframework.section3.game;
 
 import com.in28minutes.learnspringframework.section3.game.GameRunner;
 import com.in28minutes.learnspringframework.section3.game.GamingConsole;
@@ -17,7 +17,7 @@ public class GamingAppLauncherApplication {
         var gameRunner = new GameRunner(game);
         gameRunner.run();*/
 
-        try(var context = new AnnotationConfigApplicationContext(com.in28minutes.learnspringframework.section4.game.GamingAppLauncherApplication.class)) {
+        try(var context = new AnnotationConfigApplicationContext(com.in28minutes.learnspringframework.section3.game.GamingAppLauncherApplication.class)) {
             context.getBean(GamingConsole.class).up();
             context.getBean(GameRunner.class).run();
         }

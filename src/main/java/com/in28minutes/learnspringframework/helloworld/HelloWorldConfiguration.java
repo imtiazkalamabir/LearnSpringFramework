@@ -35,6 +35,10 @@ public class HelloWorldConfiguration {
         return new Person(name, age, address2);
     }
 
+    // public Person person3Parameters(String name, int age, @Qualifier("address2") Address address2) {
+    // If qualifier not used then method name with lower case can be used to specify and used as qualifier
+
+
     @Bean(name = "address3")
     @Qualifier("address3quanlifier")
     public Address address3() {
